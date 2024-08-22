@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet id="2" author="irlan.carlo@gmail.com">
+
+        <createTable tableName="product">
+            <column name="product_id" type="CHAR(36)">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="name" type="VARCHAR(255)"/>
+            <column name="description" type="VARCHAR(255)"/>
+            <column name="price" type="DECIMAL(10, 2)"/>
+            <column name="category_id" type="CHAR(36)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <insert tableName="product">
+            <column name="product_id" value="c15df616-851b-42fe-8b18-5641a5cf6c7c"/>
+            <column name="name" value="X-bacon"/>
+            <column name="description" value="Carne artesanal"/>
+            <column name="price" value="23.90"/>
+            <column name="category_id" value="0fca0eed-055c-4ae7-a64a-ab4930b7ac3d"/>
+        </insert>
+        <insert tableName="product">
+            <column name="product_id" value="a2e795fe-5552-4b98-8934-cf125cdd93b9"/>
+            <column name="name" value="Sorvete de Chocolate"/>
+            <column name="description" value="Chocolate Belga"/>
+            <column name="price" value="20.00"/>
+            <column name="category_id" value="96802746-5e80-4eab-9982-80899354de8d"/>
+        </insert>
+        <insert tableName="product">
+            <column name="product_id" value="78dfe8e2-a75b-4e2c-a7cf-c6a228e3066c"/>
+            <column name="name" value="Torta de banaca"/>
+            <column name="price" value="15.00"/>
+            <column name="category_id" value="96802746-5e80-4eab-9982-80899354de8d"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>

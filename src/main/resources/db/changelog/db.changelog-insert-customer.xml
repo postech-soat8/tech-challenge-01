@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet id="3" author="irlan.carlo@gmail.com">
+
+        <createTable tableName="customer">
+            <column name="customer_id" type="CHAR(36)">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="name" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="email_address" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="cpf" type="VARCHAR(11)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <insert tableName="customer">
+            <column name="customer_id" value="96802746-5e80-4eab-9982-80899354de8d"/>
+            <column name="name" value="John Doe"/>
+            <column name="email_address" value="john.doe@example.com"/>
+            <column name="cpf" value="12345678901"/>
+        </insert>
+        <insert tableName="customer">
+            <column name="customer_id" value="b68a4cd5-5bb4-4c98-8fb4-4a0b63a84a1e"/>
+            <column name="name" value="Jane Smith"/>
+            <column name="email_address" value="jane.smith@example.com"/>
+            <column name="cpf" value="09876543210"/>
+        </insert>
+        <insert tableName="customer">
+            <column name="customer_id" value="e7c4ed2c-3d67-4d7b-97c0-76f0d8c6f6cf"/>
+            <column name="name" value="Alice Johnson"/>
+            <column name="email_address" value="alice.johnson@example.com"/>
+            <column name="cpf" value="11223344556"/>
+        </insert>
+        <insert tableName="customer">
+            <column name="customer_id" value="cdff9404-ad10-4703-8d55-e33256b4d871"/>
+            <column name="name" value="USUARIO_ANONIMO"/>
+            <column name="email_address" value=""/>
+            <column name="cpf" value=""/>
+        </insert>
+
+    </changeSet>
+
+</databaseChangeLog>

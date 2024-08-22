@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet id="1" author="irlan.carlo@gmail.com">
+
+        <createTable tableName="product_category">
+            <column name="product_category_id" type="CHAR(36)">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="description" type="VARCHAR(255)"/>
+        </createTable>
+
+        <insert tableName="product_category">
+            <column name="product_category_id" value="0fca0eed-055c-4ae7-a64a-ab4930b7ac3d"/>
+            <column name="description" value="Lanche"/>
+        </insert>
+        <insert tableName="product_category">
+            <column name="product_category_id" value="96802746-5e80-4eab-9982-80899354de8d"/>
+            <column name="description" value="Sobremesa"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>

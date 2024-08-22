@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet id="4" author="irlan.carlo@gmail.com">
+
+        <createTable tableName="order_snack">
+            <column name="order_snack_id" type="CHAR(36)">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="customer_id" type="CHAR(36)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="progress" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_at" type="TIMESTAMP">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <insert tableName="order_snack">
+            <column name="order_snack_id" value="d7b4ec9a-1d45-4b5a-86be-98d0f6a4e5bd"/>
+            <column name="customer_id" value="96802746-5e80-4eab-9982-80899354de8d"/>
+            <column name="progress" value="RECEIVED"/>
+            <column name="created_at" valueDate="2024-07-25T14:30:00"/>
+        </insert>
+        <insert tableName="order_snack">
+            <column name="order_snack_id" value="a7b3ec1b-2d56-4c6a-96bf-87e0d7b5e5ae"/>
+            <column name="customer_id" value="b68a4cd5-5bb4-4c98-8fb4-4a0b63a84a1e"/>
+            <column name="progress" value="IN_PREPARATION"/>
+            <column name="created_at" valueDate="2024-07-26T15:45:00"/>
+        </insert>
+        <insert tableName="order_snack">
+            <column name="order_snack_id" value="c8d6c5a3-8b3c-4a5b-80e4-768d2a83a5be"/>
+            <column name="customer_id" value="e7c4ed2c-3d67-4d7b-97c0-76f0d8c6f6cf"/>
+            <column name="progress" value="READY"/>
+            <column name="created_at" valueDate="2024-07-27T16:00:00"/>
+        </insert>
+
+    </changeSet>
+
+</databaseChangeLog>
